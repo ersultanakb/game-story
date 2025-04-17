@@ -5,7 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func RegisterGameRoutes(r *gin.Engine) {
+func RegisterGameRoutes(r *gin.RouterGroup) {
 	games := r.Group("/games")
 	{
 		games.GET("/", controllers.GetGames)
